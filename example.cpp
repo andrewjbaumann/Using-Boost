@@ -5,9 +5,9 @@
 
 int main()
 {
-    using namespace boost::lambda;
+    using namespace boost::lambda; //anonymous functions
     typedef std::istream_iterator<int> in;
 
     std::for_each(
-        in(std::cin), in(), std::cout << (_2 * 3) << '\n' );
+        in(std::cin), in(), std::cout << (_1 * 3) << '\n' );
 } 
